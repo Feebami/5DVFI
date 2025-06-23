@@ -1,0 +1,9 @@
+n_steps:      1024
+max_lr:       1e-4
+base_steps:   75_000
+batch_size:   16
+emb_dim:      256
+use_3d:       True
+channel_mult: 6
+attn_heads:   0
+img_size:     192
