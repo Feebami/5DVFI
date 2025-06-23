@@ -2,3 +2,4 @@
 /UCF_test
 *.ckpt
 *.pyc
+/eval_samples
