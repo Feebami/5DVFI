@@ -1,0 +1,9 @@
+av==14.4.0
+lightning==2.5.1.post0
+numpy==2.2.5
+omegaconf==2.3.0
+torch==2.7.1
+torchcodec==0.4.0
+torchmetrics[image]==1.7.1
+torchvision==0.22.1
+tqdm==4.67.1

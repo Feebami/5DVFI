@@ -39,13 +39,8 @@ if __name__ == '__main__':
     # Load model configuration from YAML file
     config = OmegaConf.load(args.config)
 
-    # Initialize video decoder for input video
-    decoder = utils.TrimmedDecoder(args.input_path)
-    # Determine smaller dimension for aspect ratio preservation
-    small_dim = min(decoder.metadata.width, decoder.metadata.height)
-
     # Prepare image transformation pipeline (resize, normalize, etc.)
-    transform = utils.get_transform(config.img_size, small_dim)
+    transform = utils.get_transform(config.img_size)
 
     # Create dataset from input video with transformations
     data = VFIDatasetSmall(args.input_path, transform)

@@ -26,7 +26,7 @@ if __name__ == '__main__':
     parser.add_argument('--num_files', type=int, default=127,
                         help='Number of videos to interpolate')
     # DDIM sampling steps (fewer steps = faster but lower quality)
-    parser.add_argument('--ddim_steps', type=int, default=32,
+    parser.add_argument('--ddim_steps', type=int, default=16,
                         help='DDIM sampling steps')
     args = parser.parse_args()
 
@@ -59,14 +59,14 @@ if __name__ == '__main__':
         small_dim = min(decoder.metadata.width, decoder.metadata.height)
 
         # Prepare image transformations (resize, normalize, etc.)
-        transform = utils.get_transform(config.img_size)
+        transform = utils.get_transform(240)
 
         # Create dataset from video file
         data = VFIDatasetSmall(file, transform)
         # Configure dataloader for efficient batch processing
         dataloader = DataLoader(
             data,
-            batch_size=16,                # Process 16 frames per batch
+            batch_size=32,                # Process 32 frames per batch
             shuffle=False,                # Maintain temporal order
             num_workers=4,                # Parallel data loading
             persistent_workers=True,      # Maintain workers between batches

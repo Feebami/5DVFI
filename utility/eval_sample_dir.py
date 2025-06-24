@@ -23,6 +23,6 @@ if __name__ == '__main__':
     # Print evaluation results with visual separation
     print('= ' * 20 + f'Eval for {args.dir}' + ' =' * 20)
     print(f'Mean PSNR:      {mean_psnr:.4f}')   # Image quality metric (dB)
-    print(f'Mean LPIPS:     {mean_lpips:.4f}')   # Perceptual similarity metric
-    print(f'FID:            {fid:.4f}')          # Distribution similarity metric
-    print(f'Total Frames:   {frames}')            # Number of frames processed
+    print(f'Mean LPIPS:     {mean_lpips:.4f}')  # Perceptual similarity metric
+    print(f'FID:            {fid:.4f}')         # Distribution similarity metric
+    print(f'Total Frames:   {frames}')          # Number of frames processed
