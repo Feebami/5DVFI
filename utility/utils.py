@@ -11,6 +11,8 @@ from tqdm import tqdm
 
 # Use GPU if available, otherwise CPU
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
+torch.backends.cudnn.deterministic = True
+torch.backends.cudnn.benchmark = False
 
 def get_transform(img_size):
     """Create image transformation pipeline for preprocessing
@@ -51,7 +53,7 @@ def evaluate_samples(sample_folder_path):
     sample_files = os.listdir(sample_folder_path)
     
     # Initialize evaluation metrics
-    transform = get_transform(192)  # Transform for LPIPS compatibility
+    transform = get_transform(240)  # Transform for LPIPS compatibility
     psnr = PeakSignalNoiseRatio().to(device)  # PSNR: Higher is better
     fid = FrechetInceptionDistance().to(device)  # FID: Lower is better
     lpips = LearnedPerceptualImagePatchSimilarity().to(device)  # LPIPS: Lower is better

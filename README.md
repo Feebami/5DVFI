@@ -102,7 +102,7 @@ python -m utility.eval_sample_dir --dir eval_samples/diffused
 | MCVD          | 18.775  | 0.155     | 102.054   | 27.3            | 52.55*    |
 | [LDMVFI](https://github.com/danier97/LDMVFI) | **32.186**  | 0.026     | 26.301    | 439.0           | 8.48*     |
 | [MADiff](https://arxiv.org/abs/2404.13534) | 32.159  | **0.024** | 24.287    | 448.8           | 47.59^    |
-| 5DVFI         | 28.890        | 0.046     | **8.780** | 56.0            | 1.174        |
+| 5DVFI         | 29.496        | 0.052     | **8.525** | 56.0            | 1.174        |
 
 *Quantitative comparison of 5DVFI and 3 other diffusion-based VFI methods on UCF-101. The last two collumns show the number of parameters and runtime needed to interpolate one 480p frame. 5DVFI runtime was benchmarked with same number of DDIM timesteps used to produce testing data (16) using an RTX 4070 GPU.*
 
