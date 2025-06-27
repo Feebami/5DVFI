@@ -1,6 +1,6 @@
 # 3D Denoising Diffusion Video Frame Interpolation (5DVFI)
 
-[![Paper](https://img.shields.io/badge/arXiv-Paper-crimson.svg)](https://arxiv.org/abs/XXXX.XXXXX)
+<!-- [![Paper](https://img.shields.io/badge/arXiv-Paper-crimson.svg)](https://arxiv.org/abs/XXXX.XXXXX) -->
 ![GitHub](https://img.shields.io/github/license/Feebami/5DVFI)
 [![Model Deployment](https://img.shields.io/badge/Deployment-HuggingFace-orange.svg)](https://huggingface.co/spaces/Feebami/DiffusionVFI)
 
