@@ -55,8 +55,6 @@ if __name__ == '__main__':
     for file in tqdm(files, desc=os.path.basename(args.config).split('.')[0]):
         # Initialize video decoder
         decoder = utils.TrimmedDecoder(file)
-        # Get smaller dimension for aspect ratio preservation
-        small_dim = min(decoder.metadata.width, decoder.metadata.height)
 
         # Prepare image transformations (resize, normalize, etc.)
         transform = utils.get_transform(240)

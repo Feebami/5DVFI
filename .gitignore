@@ -3,3 +3,5 @@
 *.ckpt
 *.pyc
 /eval_samples
+/davis-90
+/ucf101_extracted

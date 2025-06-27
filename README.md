@@ -96,7 +96,7 @@ python -m utility.eval_sample_dir --dir eval_samples/diffused
 
 ## Results
 
-### Quantitative Evaluation (UCF-101)
+<!-- ### Quantitative Evaluation (UCF-101)
 | Model         | PSNR ↑        | LPIPS ↓   | FID ↓     | Parameters (M)  | RT (sec)  |
 |---------------|---------------|-----------|-----------|-----------------|-----------|
 | MCVD          | 18.775  | 0.155     | 102.054   | 27.3            | 52.55*    |
@@ -107,7 +107,7 @@ python -m utility.eval_sample_dir --dir eval_samples/diffused
 *Quantitative comparison of 5DVFI and 3 other diffusion-based VFI methods on UCF-101. The last two collumns show the number of parameters and runtime needed to interpolate one 480p frame. 5DVFI runtime was benchmarked with same number of DDIM timesteps used to produce testing data (16) using an RTX 4070 GPU.*
 
 *Assumed RTX 3090 GPU with 200 DDIM steps  
-^Runtime needed to interpolate one frame of Middlebury testset using one V100 GPU.
+^Runtime needed to interpolate one frame of Middlebury testset using one V100 GPU. -->
 
 ### Sample Interpolations from UCF-101 testing data
 
