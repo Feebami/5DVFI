@@ -88,11 +88,11 @@ python -m utility.make_diffused_samples
 ```
 Outputs saved to `eval_samples/diffused`
 
-### 3. Evaluate Results
+<!-- ### 3. Evaluate Results
 
 ```
 python -m utility.eval_sample_dir --dir eval_samples/diffused
-```
+``` -->
 
 ## Results
 
