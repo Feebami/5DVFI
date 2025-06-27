@@ -119,6 +119,10 @@ Every frame in these videos is an interpolation of real frames two apart in the 
 
 ## Train Models
 
+**Downloade Vimeo Triplet**:  
+[Download](http://toflow.csail.mit.edu/)  
+Put vimeo_triplet folder in working directory.
+
 **Tripletize UCF-101 subset**  
 1. Download full dataset
 2. Remove files in UCF_test from full dataset 
