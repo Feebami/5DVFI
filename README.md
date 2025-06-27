@@ -119,7 +119,7 @@ Every frame in these videos is an interpolation of real frames two apart in the 
 
 ## Train Models
 
-**Downloade Vimeo Triplet**:  
+**Download Vimeo Triplet**:  
 [Download](http://toflow.csail.mit.edu/)  
 Put vimeo_triplet folder in working directory.
 
