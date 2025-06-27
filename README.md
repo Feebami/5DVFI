@@ -156,6 +156,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   year      = {2025},
 }
 ```
+Reach out for questions or collaborations:
+chandonrhamel@gmail.com
 
 ## Acknowledgements
 
