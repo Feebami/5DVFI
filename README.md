@@ -38,9 +38,7 @@ This repository contains:
 ### Evaluation Scripts
 | Script                     | Description                                                           |
 |----------------------------|-----------------------------------------------------------------------|
-| `make_real_blend_samples.py` | Generates ground truth and blended baseline videos                  |
-| `make_diffused_samples.py` | Generates interpolated videos using diffusion models                  |
-| `eval_sample_dir.py`       | Evaluates generated videos (PSNR, LPIPS, FID)                         |
+| `test_davis.py` | Tests models generated interpolations on the Davis dataset                  |
 
 
 ## Getting Started
