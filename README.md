@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/Feebami/5DVFI)
 [![Model Deployment](https://img.shields.io/badge/Deployment-HuggingFace-orange.svg)](https://huggingface.co/spaces/Feebami/DiffusionVFI)
 
-Official implementation of 3D Denoising Diffusion for Video Frame Interpolation. This repository contains:
+This repository contains:
 - Diffusion-based video frame interpolation using 3D U-Net architectures
 - DDIM sampling for accelerated generation
 - Quantitative evaluation metrics (PSNR, LPIPS, FID)
@@ -62,52 +62,34 @@ pip install -r requirements.txt
 ### Download Resources
 
 1. **Model Weights**: [Download Weights](https://drive.google.com/file/d/1BG5yZnf5ZrAcSV21NPDgIFit-44oCNmH/view?usp=drive_link)
-2. **UCF-101 Test Videos**: [Download UCF_test](https://drive.google.com/file/d/1S7KFbABq_QQVX1nz_Z9nRKgt7j3IXShL/view?usp=drive_link)
+2. **Davis Data**: [Download test data](https://sites.google.com/view/xiangyuxu/qvi_nips19)
 
-Place downloaded files as such:
-
-5DVFI/  
---- epoch=5-step=80000.ckpt  
---- UCF_test/  
------- v_ApplyEyeMakeup_g11_c01.avi  
------- ...
+Place downloaded files in project directory
 
 ## Reproducing Results
 
-### 1. Generate Baseline Videos
+### Evaluate Results
 
 ```
-python -m utility.make_real_samples
+python test_davis.py
 ```
-Outputs saved to `eval_samples/real/`
-
-### 2. Generate Videos from Diffusion Interpolated Frames
-
-```
-python -m utility.make_diffused_samples
-```
-Outputs saved to `eval_samples/diffused`
-
-<!-- ### 3. Evaluate Results
-
-```
-python -m utility.eval_sample_dir --dir eval_samples/diffused
-``` -->
 
 ## Results
 
-<!-- ### Quantitative Evaluation (UCF-101)
+### Quantitative Evaluation (UCF-101)
 | Model         | PSNR ↑        | LPIPS ↓   | FID ↓     | Parameters (M)  | RT (sec)  |
 |---------------|---------------|-----------|-----------|-----------------|-----------|
-| MCVD          | 18.775  | 0.155     | 102.054   | 27.3            | 52.55*    |
-| [LDMVFI](https://github.com/danier97/LDMVFI) | **32.186**  | 0.026     | 26.301    | 439.0           | 8.48*     |
-| [MADiff](https://arxiv.org/abs/2404.13534) | 32.159  | **0.024** | 24.287    | 448.8           | 47.59^    |
-| 5DVFI         | 29.496        | 0.052     | **8.525** | 56.0            | 1.174        |
+| MCVD          | 18.946  | 0.247     | 32.246   | 27.3            | 52.55*    |
+| [LDMVFI](https://github.com/danier97/LDMVFI) | 25.541  | 0.107     | 12.554    | 439.0           | 8.48*     |
+| [MADiff](https://arxiv.org/abs/2404.13534) | 26.069  | 0.096 | 11.089    | 448.8           | 47.59^    |
+| 5DVFI         | 21..481        | 0.239     | 45.322 | 56.0            | 1.174        |
 
-*Quantitative comparison of 5DVFI and 3 other diffusion-based VFI methods on UCF-101. The last two collumns show the number of parameters and runtime needed to interpolate one 480p frame. 5DVFI runtime was benchmarked with same number of DDIM timesteps used to produce testing data (16) using an RTX 4070 GPU.*
+*QUANTITATIVE COMPARISON OF 5DVFI AND THREE OTHER DIFFUSION-BASED VFI METHODS ON DAVIS DATASET. THE LAST TWO
+COLUMNS SHOW THE NUMBER OF PARAMETERS AND RUNTIME NEEDED TO INTERPOLATE ONE 480P FRAME. 5DVFI RUNTIME WAS
+BENCHMARKED WITH THE SAME NUMBER OF DDIM TIMESTEPS USED TO PRODUCE TESTING DATA (16) USING AN RTX 4070 GPU.*
 
 *Assumed RTX 3090 GPU with 200 DDIM steps  
-^Runtime needed to interpolate one frame of Middlebury testset using one V100 GPU. -->
+^Runtime needed to interpolate one frame of Middlebury testset using one V100 GPU.
 
 ### Sample Interpolations from UCF-101 testing data
 
