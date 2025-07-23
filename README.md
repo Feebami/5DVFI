@@ -137,7 +137,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 @misc{hamel20255dvfi,
   title     = {3D Denoising Diffusion Video Frame Interpolation},
   author    = {Chandon Hamel},
+  school    = {Regis University},
   year      = {2025},
+  address   = {Denver, CO, USA}
 }
 ```
 Reach out for questions or collaborations:
