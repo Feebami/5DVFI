@@ -89,14 +89,6 @@ BENCHMARKED WITH THE SAME NUMBER OF DDIM TIMESTEPS USED TO PRODUCE TESTING DATA 
 *Assumed RTX 3090 GPU with 200 DDIM steps  
 ^Runtime needed to interpolate one frame of Middlebury testset using one V100 GPU.
 
-### Sample Interpolations from UCF-101 testing data
-
-| Original  | Frame Blending  | 5DVFI |
-|-----------|-----------------|-------|
-| ![original](display/original_examples.gif) | ![blended](display/blend_examples.gif) | ![diffused](display/diffused_examples.gif)  |
-
-Every frame in these videos is an interpolation of real frames two apart in the frame sequence. The 5DVFI video examples are clips from samples used to calculate result metrics above. 
-
 ## Train Models
 
 **Download Vimeo Triplet**:  
