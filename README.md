@@ -80,7 +80,7 @@ python test_davis.py
 | MCVD          | 18.946  | 0.247     | 32.246   | 27.3            | 52.55*    |
 | [LDMVFI](https://github.com/danier97/LDMVFI) | 25.541  | 0.107     | 12.554    | 439.0           | 8.48*     |
 | [MADiff](https://arxiv.org/abs/2404.13534) | 26.069  | 0.096 | 11.089    | 448.8           | 47.59^    |
-| 5DVFI         | 21..481        | 0.239     | 45.322 | 56.0            | 1.174        |
+| 5DVFI         | 21.481        | 0.239     | 45.322 | 56.0            | 1.174        |
 
 *QUANTITATIVE COMPARISON OF 5DVFI AND THREE OTHER DIFFUSION-BASED VFI METHODS ON DAVIS DATASET. THE LAST TWO
 COLUMNS SHOW THE NUMBER OF PARAMETERS AND RUNTIME NEEDED TO INTERPOLATE ONE 480P FRAME. 5DVFI RUNTIME WAS
